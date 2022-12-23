@@ -72,8 +72,52 @@ namespace Exe5_072_Kelompok3
 
     class Program
     {
-
+        static void Main(string[] args)
+        {
+            Queue q = new Queue();
+            char ch;
+            while (true)
+            {
+                try
+                {
+                    Console.Clear();
+                    Console.WriteLine("menu");
+                    Console.WriteLine("1. Implement Enter operation");
+                    Console.WriteLine("2. Implement Delete operation");
+                    Console.WriteLine("3. Display values");
+                    Console.WriteLine("4. Exit");
+                    Console.Write("\nEnter your choice (1-4): ");
+                    ch = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine();
+                    switch (ch)
+                    {
+                        case '1':
+                            Console.Clear();
+                            q.Enter();
+                            break;
+                        case '2':
+                            Console.Clear();
+                            q.Delete();
+                            break;
+                        case '3':
+                            Console.Clear();
+                            q.Display();
+                            break;
+                        case '4':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("Invalid option!!");
+                            }
+                            break;
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Silahkan periksa kembali data yang kamu masukkan!");
+                }
+            }
+        }
     }
 
-    
 }

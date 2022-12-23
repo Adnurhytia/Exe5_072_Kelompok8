@@ -16,12 +16,12 @@ namespace Exe5_072_Kelompok3
 
     class Queue
     {
-        Node Front, Rear;
+        Node Adinda, Nurhayati;
 
         public Queue()
         {
-            Front = null;
-            Rear = null;
+            Adinda = null;
+            Nurhayati = null;
         }
 
         public void Enter()
@@ -32,27 +32,42 @@ namespace Exe5_072_Kelompok3
             data = Console.ReadLine();
             newNode.nama = data;
             newNode.next = null;
-            if (Front == null)
+            if (Adinda == null)
             {
-                Front = newNode;
-                Rear = newNode;
+                Adinda = newNode;
+                Nurhayati = newNode;
                 return;
             }
-            Rear.next = newNode;
+            Nurhayati.next = newNode;
 
         }
         public void Delete()
         {
-            if (Front == null)
+            if (Adinda == null)
             {
                 Console.WriteLine("Tidak ada data didalam antrian");
                 return;
             }
-            Console.WriteLine("Data yang dihapus " + Front.nama);
+            Console.WriteLine("Data yang dihapus " + Adinda.nama);
             Console.ReadKey();
-            Front = Front.next;
-            if (Front == null)
-                Rear = null ;
+            Adinda = Adinda.next;
+            if (Adinda == null)
+                Nurhayati = null ;
         }
+        public void Display()
+        {
+            if (Adinda == null)
+            {
+                Console.WriteLine("Tidak ada data dalam antrian");
+                return ;
+            }
+            Node display;
+            for (display = Adinda; display != null; display = display.next)
+                Console.WriteLine(display.nama);
+            Console.WriteLine("\nTekan 'Enter' untuk melanjutkan Program");
+            Console.ReadKey();
+        }
+    }
+
     }
 }

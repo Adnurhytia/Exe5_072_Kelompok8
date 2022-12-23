@@ -14,9 +14,15 @@ namespace Exe5_072_Kelompok3
         }
     }
 
-    class Queues
+    class Queue
     {
         Node Front, Rear;
+
+        public Queue()
+        {
+            Front = null;
+            Rear = null;
+        }
 
     }
 }

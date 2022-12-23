@@ -67,7 +67,13 @@ namespace Exe5_072_Kelompok3
             Console.WriteLine("\nTekan 'Enter' untuk melanjutkan Program");
             Console.ReadKey();
         }
-    }
 
     }
+
+    class Program
+    {
+
+    }
+
+    
 }

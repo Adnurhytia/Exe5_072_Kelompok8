@@ -24,5 +24,23 @@ namespace Exe5_072_Kelompok3
             Rear = null;
         }
 
+        public void Enter()
+        {
+            string data;
+            Node newNode = new Node();
+            Console.Write("Masukkan Input: ");
+            data = Console.ReadLine();
+            newNode.nama = data;
+            newNode.next = null;
+            if (Front == null)
+            {
+                Front = newNode;
+                Rear = newNode;
+                return;
+            }
+            Rear.next = newNode;
+
+        }
+
     }
 }

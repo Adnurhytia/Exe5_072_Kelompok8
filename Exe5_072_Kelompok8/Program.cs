@@ -27,7 +27,7 @@ namespace Exe5_072_Kelompok3
         public void Enter()
         {
             string data;
-            Node newNode = new Node();
+            Node newNode = new Node("", null);
             Console.Write("Masukkan Input: ");
             data = Console.ReadLine();
             newNode.nama = data;

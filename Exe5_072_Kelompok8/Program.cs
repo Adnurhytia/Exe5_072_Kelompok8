@@ -41,6 +41,18 @@ namespace Exe5_072_Kelompok3
             Rear.next = newNode;
 
         }
-
+        public void Delete()
+        {
+            if (Front == null)
+            {
+                Console.WriteLine("Tidak ada data didalam antrian");
+                return;
+            }
+            Console.WriteLine("Data yang dihapus " + Front.nama);
+            Console.ReadKey();
+            Front = Front.next;
+            if (Front == null)
+                Rear = null ;
+        }
     }
 }
